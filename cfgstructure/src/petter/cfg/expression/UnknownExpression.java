@@ -111,6 +111,29 @@ public class UnknownExpression implements Expression, java.io.Serializable{
     public int getDegree(){
 	return -1;
     }
-
+    @Override
+        public int hashCode() {
+            int hash = 3;
+            hash = 79 * hash + this.type.hashCode();
+            return hash;
+        }
+    
+        @Override
+        public boolean equals(Object obj) {
+            if (this == obj) {
+                return true;
+            }
+            if (obj == null) {
+                return false;
+            }
+            if (getClass() != obj.getClass()) {
+                return false;
+            }
+            final UnknownExpression other = (UnknownExpression) obj;
+            if (!this.type.equals(other.type)) {
+                return false;
+            }
+            return true;
+        }
 }
 

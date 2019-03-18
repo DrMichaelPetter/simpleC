@@ -179,6 +179,13 @@ public class FunctionCall implements Expression, java.io.Serializable{
         if(it2.hasNext()) return false;
         return true;
     }
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 97 * hash + name.hashCode();
+        hash = 97 * hash + params.hashCode();
+        return hash;
+    }
 
     private Type type;
     /**

@@ -127,6 +127,12 @@ public class IntegerConstant implements Expression, java.io.Serializable{
         if (! (o instanceof IntegerConstant)) return false;
         return (((IntegerConstant)o).value == value);
     }
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 59 * hash + this.value;
+        return hash;
+    }
 
     @Override
     public Type getType() {

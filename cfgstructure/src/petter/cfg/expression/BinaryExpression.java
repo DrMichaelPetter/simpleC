@@ -197,6 +197,14 @@ public class BinaryExpression implements Expression, java.io.Serializable{
         if (!sign.equals(((BinaryExpression)o).sign)) return false;
         return true;
     }
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 29 * hash + left.hashCode();
+        hash = 29 * hash + right.hashCode();
+        hash = 29 * hash + sign.hashCode();
+        return hash;
+    }
 
     @Override
     public boolean hasArrayAccess() {

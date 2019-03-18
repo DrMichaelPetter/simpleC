@@ -128,7 +128,12 @@ public class StringLiteral implements Expression, java.io.Serializable{
         if (! (o instanceof StringLiteral)) return false;
         return (((StringLiteral)o).value == value);
     }
-
+    @Override
+        public int hashCode() {
+            int hash = 7;
+            hash = 79 * hash + value.hashCode();
+            return hash;
+        }
     @Override
     public Type getType() {
         return new PointerTo(Char.create());

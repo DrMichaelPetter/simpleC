@@ -147,6 +147,14 @@ public class UnaryExpression implements Expression, java.io.Serializable{
     }
 
     @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 23 * hash + e.hashCode();
+        hash = 23 * hash + sign.hashCode();
+        return hash;
+    }
+
+    @Override
     public boolean hasArrayAccess() {
         return e.hasArrayAccess();
     }
