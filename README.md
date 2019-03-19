@@ -87,6 +87,13 @@ It offers informations like programstates, beginstate, endstate, and transitions
 between the states. Normally, You do not have to touch this one directly, instead
 rely on the fixpoint engine:
 
+## Program Transformations
+
+The CFG structure package is designed based on edges, whose static data (i.e. label,
+e.g. lhs/rhs of an assignment) is immutable after construction. In case of manipulation
+of the CFG, the programmer is supposed to introduce new edges and delete old ones.
+
+
 ## Fixpoint engine
 
 For the fixpoint-engine, you need to create your own class:

@@ -6,8 +6,12 @@ import petter.cfg.Visitor;
 import java.util.Map;
 import java.util.HashMap;
 /**
- * represents an edge in a CFG
- * abstract class for all kinds of CFGEdge
+ * represents an edge in a CFG; abstract class for all kinds of CFGEdge
+ * edges are supposed to be immutable wrt. their static
+ * properties (e.g. lhs and rhs for assignments). Transformations on
+ * the CFG are supposed to introduce new edges either directly or via
+ * the TransitionFactory
+ * @see petter.cfg.TransitionFactory
  */
 public abstract class Transition implements java.io.Serializable, Analyzable{
     protected State source;
