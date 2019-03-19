@@ -1,0 +1,10 @@
+/cfgstructure/etc/
+/cfgstructure/build/
+/cfgstructure/dist/
+/cfgstructure/java/
+/simplec/dist/
+/simplec/build/
+/simplec/generated/
+/simplec/java/
+/simplec/*.png
+*~
