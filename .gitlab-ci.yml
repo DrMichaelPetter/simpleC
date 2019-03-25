@@ -15,7 +15,7 @@ build:
     - cd ..
     - cd cfgstructure
     - ant clean
-    - ant
+    - ant shared
   artifacts:
     name: "simplecparser-$CI_COMMIT_SHORT_SHA"
     paths:
