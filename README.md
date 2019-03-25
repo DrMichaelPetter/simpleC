@@ -3,6 +3,12 @@
 This is a simplified C-like frontend, which produces Compilation Units, which
 hold Control Flow Graphs.
 
+## binary distribution
+
+You can get a bleeding edge built from the git sources from https://versioncontrolseidl.in.tum.de/petter/simplec/-/jobs/artifacts/master/download?job=build
+
+## sources
+
 Both projects come with a Netbeans Project file -- but You can of course just
 use the command line build tool ANT, whose build.xml files come with the
 projects.
