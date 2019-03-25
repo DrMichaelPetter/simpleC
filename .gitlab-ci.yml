@@ -1,0 +1,23 @@
+image: java:latest
+
+before_script:
+  - echo nothing
+
+stages:
+  - build
+
+build:
+  stage: build
+  script: 
+    - cd simplec
+    - ant clean
+    - ant 
+    - cd ..
+    - cd cfgstructure
+    - ant clean
+    - ant
+  artifacts:
+    name: "simplecparser-$CI_COMMIT_SHORT_SHA"
+    paths:
+    - cfgstructure/dist/cfgstructure.jar
+    - simplec/dist/Compiler.jar
